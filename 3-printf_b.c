@@ -7,6 +7,7 @@
 int print_binary(va_list va)
 {
 	int flag = 0;
+	int cont = 0;
 	int i = 0;
 	int a = 1;
 	int b;
@@ -22,7 +23,8 @@ int print_binary(va_list va)
 		{
 			b = p >> (31 - i);
 			_putchar(b + 48);
+			cont++;
 		}
 	}
-	return (0);
+	return (cont);
 }
