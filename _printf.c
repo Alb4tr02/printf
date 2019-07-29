@@ -5,18 +5,22 @@
  * @a: formats input.
  * Return: lenght of format.
  */
-void make_struct(prfor_t *a)
+void make_struct(prfor_t a[])
 {
-	prfor_t form_get[] = {
-		{"c", print_char},
-		{"s", print_string},
-		{"i", print_number},
-		{"d", print_number},
-		{"b", print_binary},
-		{"R", print_string_rot},
-		{NULL, NULL}
-	};
-	a = form_get;
+	a[0].form = "c";
+	a[0].f = print_char;
+	a[1].form = "s";
+	a[1].f = print_string;
+	a[2].form = "i";
+	a[2].f = print_number;
+	a[3].form = "d";
+	a[3].f = print_number;
+	a[4].form = "b";
+	a[4].f = print_binary;
+	a[5].form = "R";
+	a[5].f = print_string_rot;
+	a[6].form = NULL;
+	a[6].f = NULL;
 }
 /**
  * _printf - produces output according to a format.
@@ -26,7 +30,7 @@ void make_struct(prfor_t *a)
 
 int _printf(const char * const format, ...)
 {
-	prfor_t *form_get;
+	prfor_t form_get[7];
 	int i, j, lenght = 0, find = 0;
 	va_list argu;
 
@@ -59,7 +63,7 @@ int _printf(const char * const format, ...)
 				_putchar(format[i]);
 			}
 		}
-		length++;
+		lenght++;
 	}
 	va_end(argu);
 	return (lenght);
