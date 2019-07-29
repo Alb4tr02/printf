@@ -43,6 +43,10 @@ int main(void)
 	alen = elen = 0;
 	printf("Expected   : %world\n");
 	_printf("Actual     : %world\n");
+	printf("Expected   : %\n%");
+	_printf("Actual     : %\n%");
+	printf("Expected   : %\n");
+	_printf("Actual     : %\n");
 	printf("Expected   : %s\n", "holberton");
 	_printf("Actual     : %s\n", "holberton");
 	printf("Expected   : %s$\n", "");
@@ -53,6 +57,10 @@ int main(void)
 	len2 = _printf("Actual     : %s$\n", NULL);
 	printf("Expected   : %i\n", elen);
 	_printf("Actual     : %i\n", alen);
+	elen = printf("%", NULL);
+	alen = _printf("%", NULL);
+	printf("Expected casot  : %i\n", elen);
+	_printf("Actual casot    : %i\n", alen);
 	printf("Expected   : %i\n", len);
 	_printf("Actual     : %i\n", len2);
 	printf("Expected   : %sschool\n", "holberton");
