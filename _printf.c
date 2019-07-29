@@ -8,40 +8,26 @@
 
 int _printf(const char * const format, ...)
 {
-	prfor_t form_get[] = {
-		{"c", print_char},
-		{"s", print_string},
-		{"i", print_number},
-		{"d", print_number},
-		{"b", print_binary},
-		{"R", print_string_rot},
-		{NULL, NULL}
-	};
-	int i, j, lenght;
+	prfor_t form_get[] = {{"c", print_char}, {"s", print_string},
+			      {"i", print_number}, {"d", print_number},
+			      {"b", print_binary}, {"R", print_string_rot},
+			      {NULL, NULL}};
+	int i, j, lenght, find;
 	va_list argu;
 
 	va_start(argu, format);
-	lenght = 0;
-	int find = 0;
-
-	if (format == NULL)
+	lenght = 0, find = 0;
+	if (format == NULL || (format[0] == '%' && format[1] == 0))
 		return (-1);
 	for (i = 0; format != NULL && format[i]; i++)
 	{
 		if (format[i] != '%')
-		{
-			_putchar(format[i]);
-			lenght++;
-		}
+			lenght += _putchar(format[i]);
 		else
 		{
-			i++;
-			j = 0;
+			i++, j = 0;
 			if (format[i] == '%')
-			{
-				_putchar('%');
-				lenght++;
-			}
+				lenght += _putchar('%');
 			find = 0;
 			for (; j < 6; j++)
 			{
@@ -54,9 +40,8 @@ int _printf(const char * const format, ...)
 			}
 			if (!find && format[i] != '%')
 			{
-				lenght += 2;
-				_putchar('%');
-				_putchar(format[i]);
+				lenght += _putchar('%');
+				lenght += _putchar(format[i]);
 			}
 		}
 	}
