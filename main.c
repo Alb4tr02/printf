@@ -141,6 +141,39 @@ int main(void)
 	_printf("Actual     : %d\n", INT_MAX);
 	printf("Expected   : %d\n", INT_MIN);
 	_printf("Actual     : %d\n", INT_MIN);
+
+	//REVERSE
+	printf("=====================\n");
+	printf("*****REVERSE*****\n");
+	printf("=====================\n");
+	char *str2 = "hello, world";
+	alen = elen = 0;
+	_printf("Actual     : %r\n", "holberton");
+	_printf("Actual     : %r$\n", "");
+	alen = _printf("Actual     : %r\n", str2);
+	len2 = _printf("Actual     : %r$\n", NULL);
+	_printf("Actual     : %i\n", alen);
+	_printf("Actual casot    : %i\n", alen);
+	_printf("Actual     : %i\n", len2);
+	printf("Expected   : %rschool\n", "holberton");
+	_printf("Actual     : %rschool\n", "holberton");
+
+	//ROT13
+	printf("=====================\n");
+	printf("*****ROT13*****\n");
+	printf("=====================\n");
+	char *str3 = "hello, world";
+	alen = elen = 0;
+	_printf("Actual     : %R\n", "holberton");
+	_printf("Actual     : %R$\n", "");
+	alen = _printf("Actual     : %R\n", str3);
+	len2 = _printf("Actual     : %R$\n", NULL);
+	_printf("Actual     : %i\n", alen);
+	_printf("Actual casot    : %i\n", alen);
+	_printf("Actual     : %i\n", len2);
+	printf("Expected   : %Rschool\n", "holberton");
+	_printf("Actual     : %Rschool\n", "holberton");
+
 	//combos
 	printf("Expected   : %i, %c, %d, %s\n", 324, 'g', 32, "hello");
 	_printf("Expected   : %i, %c, %d, %s\n", 324, 'g', 32, "hello");

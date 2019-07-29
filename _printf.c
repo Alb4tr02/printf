@@ -17,10 +17,12 @@ void make_struct(prfor_t a[])
 	a[3].f = print_number;
 	a[4].form = "b";
 	a[4].f = print_binary;
-	a[5].form = "R";
-	a[5].f = print_string_rot;
-	a[6].form = NULL;
-	a[6].f = NULL;
+	a[5].form = "r";
+	a[5].f = print_string_rev;
+	a[6].form = "R";
+	a[6].f = print_string_rot;
+	a[7].form = NULL;
+	a[7].f = NULL;
 }
 /**
  * _printf - produces output according to a format.
@@ -30,7 +32,7 @@ void make_struct(prfor_t a[])
 
 int _printf(const char * const format, ...)
 {
-	prfor_t form_get[7];
+	prfor_t form_get[8];
 	int i, j, lenght = 0, find = 0;
 	va_list argu;
 
@@ -48,7 +50,7 @@ int _printf(const char * const format, ...)
 			if (format[i] == '%')
 				_putchar('%');
 			find = 0;
-			for (; j < 6; j++)
+			for (; j < 7; j++)
 			{
 				if (form_get[j].form[0] == format[i])
 				{

@@ -30,6 +30,7 @@ int print_char(va_list va);
 int print_string(va_list va);
 int print_number(va_list va);
 int print_binary(va_list va);
+int print_string_rev(va_list va);
 int print_string_rot(va_list va);
 
 #endif
