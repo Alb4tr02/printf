@@ -14,13 +14,15 @@ int main(void)
 	printf("START OF TEST\n");
 
 	//char
+	int res = 0;
 	char c = 'z';
 	int alen, elen;
 	int len, len2;
 	printf("=====================\n");
 	printf("*****BINARIO*****\n");
 	printf("=====================\n");
-	_printf("%b\n", 0);
+	res = _printf("%b", 77);
+	printf("binario: %d", res);
 	printf("=====================\n");
 	printf("*****CHAR*****\n");
 	printf("=====================\n");
