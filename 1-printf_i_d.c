@@ -43,5 +43,5 @@ int print_number(va_list va)
 		lenght++;
 		tend /= 10;
 	}
-	return(lenght);
+	return (lenght);
 }

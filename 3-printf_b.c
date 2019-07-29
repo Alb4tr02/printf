@@ -24,5 +24,5 @@ int print_binary(va_list va)
 			_putchar(b + 48);
 		}
 	}
-	return(0);
+	return (0);
 }

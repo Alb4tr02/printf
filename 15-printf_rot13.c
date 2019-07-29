@@ -16,13 +16,13 @@ int print_string_rot(va_list va)
 	{
 		for (i = 0; nu[i] != '\0'; i++)
 			_putchar(nu[i]);
-		return(6);
+		return (6);
 	}
 	for (i = 0; s[i] != '\0'; i++)
 		_putchar(s[i]);
 	lenght = _strlen(s);
 	free(s);
-	return(lenght);
+	return (lenght);
 }
 
 
