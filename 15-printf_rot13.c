@@ -65,6 +65,9 @@ char *rot13(char *s)
 	char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char n[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
+	if (s == NULL)
+		return (NULL);
+
 	for (iter = 0; s[iter] != '\0'; iter++)
 	{
 		for (i = 0; i < 52; i++)
