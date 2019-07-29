@@ -11,7 +11,7 @@ int print_binary(va_list va)
 	int i = 0;
 	int a = 1;
 	int b;
-	int prueba = va_arg(va, int);
+	unsigned int prueba = va_arg(va, unsigned int);
 	unsigned int p;
 
 	for (; i < 32; i++)
