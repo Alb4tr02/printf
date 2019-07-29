@@ -18,6 +18,10 @@ int main(void)
 	int alen, elen;
 	int len, len2;
 	printf("=====================\n");
+	printf("*****BINARIO*****\n");
+	printf("=====================\n");
+	_printf("%b\n", 0);
+	printf("=====================\n");
 	printf("*****CHAR*****\n");
 	printf("=====================\n");
 	printf("Expected   : %c\n", 'a');

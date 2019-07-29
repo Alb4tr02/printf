@@ -26,5 +26,10 @@ int print_binary(va_list va)
 			cont++;
 		}
 	}
+	if (!cont)
+	{
+		cont++;
+		_putchar('0');
+	}
 	return (cont);
 }
