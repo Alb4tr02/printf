@@ -22,6 +22,7 @@ int _printf(const char * const format, ...)
 
 	va_start(argu, format);
 	lenght = 0;
+	int find = 0;
 
 	if (format == NULL)
 		return (-1);
@@ -37,14 +38,25 @@ int _printf(const char * const format, ...)
 			i++;
 			j = 0;
 			if (format[i] == '%')
+			{
 				_putchar('%');
+				lenght++;
+			}
+			find = 0;
 			for (; j < 6; j++)
 			{
 				if (form_get[j].form[0] == format[i])
 				{
 					lenght += (form_get[j].f(argu));
+					find = 1;
 					break;
 				}
+			}
+			if (!find && format[i] != '%')
+			{
+				lenght += 2;
+				_putchar('%');
+				_putchar(format[i]);
 			}
 		}
 	}
