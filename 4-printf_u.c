@@ -1,13 +1,14 @@
 #include "holberton.h"
 /**
- * print_number - print an int numbers.
+ * print_unsig - print an int numbers.
  * @va: number tested
  * Return: Always 0.
  */
-int print_unsigned(va_list va)
+int print_unsig(va_list va)
 {
 	int dig = 0, tend = 1, iter = 1;
-	long int numch, num, n;
+	long int numch, num;
+	unsigned int n;
 	int lenght;
 
 	lenght = 0;

@@ -22,15 +22,17 @@ void make_struct(prfor_t a[])
 	a[6].form = "R";
 	a[6].f = print_string_rot;
 	a[7].form = "u";
-	a[7].f = print_unsigned;
+	a[7].f = print_unsig;
 	a[8].form = "o";
 	a[8].f = print_octal;
 	a[9].form = "x";
 	a[9].f = print_hexa;
 	a[10].form = "X";
 	a[10].f = print_Hexa;
-	a[11].form = NULL;
-	a[11].f = NULL;
+	a[11].form = "S";
+	a[11].f = print_String;
+	a[12].form = NULL;
+	a[12].f = NULL;
 }
 /**
  * _printf - produces output according to a format.
@@ -41,7 +43,7 @@ void make_struct(prfor_t a[])
 int _printf(const char * const format, ...)
 {
 
-	prfor_t form_get[12];
+	prfor_t form_get[13];
 	int i, j, lenght = 0, find = 0;
 	va_list argu;
 
@@ -59,7 +61,7 @@ int _printf(const char * const format, ...)
 			if (format[i] == '%')
 				_putchar('%');
 			find = 0;
-			for (; j < 11; j++)
+			for (; j < 12; j++)
 			{
 				if (form_get[j].form[0] == format[i])
 				{
