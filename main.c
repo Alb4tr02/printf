@@ -20,6 +20,10 @@ int main(void)
 	int res = 0;
 	char c = 'z';
 	printf("=====================\n");
+	printf("*****PRINT S*****\n");
+	printf("=====================\n");
+	_printf("\n%S\n", "looool\tlol");
+	printf("=====================\n");
 	printf("*****HEXA*****\n");
 	printf("=====================\n");
 	printf("\n%x\n", 1221345);
@@ -38,10 +42,20 @@ int main(void)
 	int b = _printf("\n%o\n", (INT_MAX * (-1)));
 	printf("%d\n", a);
 	printf("%d\n", b);
+	printf("positivos\n");
 	a = printf("\n%o\n", INT_MAX);
 	b = _printf("\n%o\n", INT_MAX);
 	printf("%d\n", a);
 	printf("%d\n", b);
+	a = printf("\n%o\n", 8);
+	b = _printf("\n%o\n", 8);
+	printf("%d\n", a);
+	printf("%d\n", b);
+	a = printf("\n%o\n", 123456);
+	b = _printf("\n%o\n", 123456);
+	printf("%d\n", a);
+	printf("%d\n", b);
+
 	printf("=====================\n");
 	printf("*****CHAR*****\n");
 	printf("=====================\n");
