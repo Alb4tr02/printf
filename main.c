@@ -17,11 +17,27 @@ int main(void)
 	printf("START OF TEST\n");
 
 	//char
+	int res = 0;
 	char c = 'z';
+	printf("=====================\n");
+	printf("*****HEXA*****\n");
+	printf("=====================\n");
+	printf("\n%x\n", 1221345);
+	_printf("\n%x\n", 1221345);
+	printf("\n%X\n", 1221345);
+	_printf("\n%X\n", 1221345);
 	printf("=====================\n");
 	printf("*****BINARIO*****\n");
 	printf("=====================\n");
-	_printf("%b\n", 0);
+	res = _printf("%b", 77);
+	printf("binario: %d", res);
+	printf("=====================\n");
+	printf("*****OCTAL*****\n");
+	printf("=====================\n");
+	int a = printf("\n%o\n", 123456732);
+	int b = _printf("\n%o\n", 123456732);
+	printf("%d\n", a);
+	printf("%d\n", b);
 	printf("=====================\n");
 	printf("*****CHAR*****\n");
 	printf("=====================\n");
