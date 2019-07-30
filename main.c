@@ -25,9 +25,8 @@ int main(void)
 	res = _printf("hola %S HOLA\n", NULL);
 	printf("%d\n", res);
 	_printf("\n%S\n", "looool\nlol");
-	printf("=====================\n");
-	_printf("\n%S\n", "looool\tlol");
-	printf("=====================\n");
+	res = _printf("%S\n", "Holberton\nSchool");
+	printf("%d\n", res);
 
 	//hexadecimal
 	printf("*****HEXA*****\n");
