@@ -40,14 +40,11 @@ void hex_print(char s)
 	char bl[8];
 	int i = 0;
 	unsigned int r = 0;
-	unsigned char p = 255;
 	unsigned char bit = 1;
-
-	p = (p & s);
 
 	for (i = 0; i < 8; i++)
 	{
-		r = ((bit << (7 - i)) & p);
+		r = ((bit << (7 - i)) & s);
 		r = r >> (7 - i);
 		bl[i] = r + '0';
 	}
@@ -67,6 +64,7 @@ void print_arr(char bin[])
 
 	for (; i <= 4; i += 4)
 	{
+		res = 0;
 		res += 8 * (bin[i + 0] - '0');
 		res += 4 * (bin[i + 1] - '0');
 		res += 2 * (bin[i + 2] - '0');
