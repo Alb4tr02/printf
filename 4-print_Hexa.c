@@ -1,3 +1,4 @@
+#include "holberton.h"
 char compareH(int res)
 {
 	char h = 'a';
@@ -60,7 +61,7 @@ int print_Hexa(va_list va)
 		res += 4 * (binary[i + 1] - '0');
 		res += 2 * (binary[i + 2] - '0');
 		res += 1 * (binary[i + 3] - '0');
-		h = compareh(res);
+		h = compareH(res);
 		_putchar(h);
 		cont++;
 	}

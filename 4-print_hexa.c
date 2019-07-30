@@ -1,3 +1,4 @@
+#include "holberton.h"
 char compareh(int res)
 {
 	char h = 'a';
