@@ -7,16 +7,11 @@
 int print_String(va_list va)
 {
 	char *s;
-	char nu[] = "(null)";
 	int i, cont = 0;
 
 	s = va_arg(va, char *);
 	if (s == NULL)
-	{
-		for (i = 0; nu[i] != '\0'; i++)
-			_putchar(nu[i]);
-		return (6);
-	}
+		s = "(null)";
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		if ((s[i] > 0 && s[i] < 32) || (s[i] >= 127))
