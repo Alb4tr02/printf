@@ -34,8 +34,12 @@ int main(void)
 	printf("=====================\n");
 	printf("*****OCTAL*****\n");
 	printf("=====================\n");
-	int a = printf("\n%o\n", 123456732);
-	int b = _printf("\n%o\n", 123456732);
+	int a = printf("\n%o\n", (INT_MAX * (-1)));
+	int b = _printf("\n%o\n", (INT_MAX * (-1)));
+	printf("%d\n", a);
+	printf("%d\n", b);
+	a = printf("\n%o\n", INT_MAX);
+	b = _printf("\n%o\n", INT_MAX);
 	printf("%d\n", a);
 	printf("%d\n", b);
 	printf("=====================\n");
