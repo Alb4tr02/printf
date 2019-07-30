@@ -233,7 +233,7 @@ int main(void)
 	printf("=====================\n");
 	printf("*****ROT13*****\n");
 	printf("=====================\n");
-	char *str3 = "hello, world";
+	char *str3 = "Hello, Holberton";
 	alen = elen = 0;
 	_printf("Actual     : %R\n", "holberton");
 	_printf("Actual     : %R$\n", "");
