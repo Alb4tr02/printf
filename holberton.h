@@ -21,7 +21,11 @@ int _putchar(char c);
 int _strlen(char *s);
 char *_strdup(char *str);
 char *rot13(char *s);
-
+void array_binary(int prueba, char *binary);
+int print_octal_pos(int prueba);
+int print_octal_neg(int prueba);
+char copmareh(int res);
+char copmareH(int res);
 /*functios*/
 int _printf(const char * const format, ...);
 
@@ -32,5 +36,8 @@ int print_number(va_list va);
 int print_binary(va_list va);
 int print_string_rev(va_list va);
 int print_string_rot(va_list va);
-
+int print_unsigned(va_list va);
+int print_hexa(va_list prueba);
+int print_Hexa(va_list prueba);
+int print_octal(va_list prueba);
 #endif
