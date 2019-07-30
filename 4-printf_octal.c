@@ -50,12 +50,18 @@ int print_octal_pos(int prueba)
 		_putchar(res + '0');
 		cont++;
 	}
-	for (i = p + 3; i <= 31; i += 3)
+	int flag1 = 1;
+	for (i = p - 3; i <= 31; i += 3)
 	{
 		res  = 0;
 		res += 1 * (binary[i - 0] - '0');
 		res += 2 * (binary[i - 1] - '0');
 		res += 4 * (binary[i - 2] - '0');
+		if (flag1 && !res)
+		{
+			flag1 = 0;
+			continue;
+		}
 		_putchar(res + '0');
 		cont++;
 	}

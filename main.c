@@ -16,32 +16,61 @@ int main(void)
 	_printf(NULL);
 	printf("START OF TEST\n");
 
-	//char
 	int res = 0;
-	char c = 'z';
+
+	//hexadecimal
 	printf("=====================\n");
 	printf("*****HEXA*****\n");
 	printf("=====================\n");
-	printf("\n%x\n", 1221345);
-	_printf("\n%x\n", 1221345);
-	printf("\n%X\n", 1221345);
-	_printf("\n%X\n", 1221345);
+	int e = printf("\n%x, %X\n", (INT_MAX * (-1)), (INT_MAX * (-1)));
+	int f = _printf("\n%x, %X\n", (INT_MAX * (-1)), (INT_MAX * (-1)));
+	printf("Expected   : %d\n", e);
+	printf("Actual     : %d\n", f);
+	e = printf("\nExpected   : %x, %X\n", 20, 20);
+	f = _printf("\nActual     : %x, %X\n", 20, 20);
+	printf("Expected   : %d\n", e);
+	printf("Actual     : %d\n", f);
+	e = printf("\nExpected   : %x, %X\n", INT_MAX, INT_MAX);
+	f = _printf("\nActual     : %x, %X\n", INT_MAX, INT_MAX);
+	printf("Expected   : %d\n", e);
+	printf("Actual     : %d\n", f);
+	for (int g = 0; g < 21; g++)
+	{
+		printf("\nExpected   : %x, %X\n", g, g);
+		_printf("\nActual     : %x, %X\n", g, g);
+	}
+
+	//binario
 	printf("=====================\n");
 	printf("*****BINARIO*****\n");
 	printf("=====================\n");
-	res = _printf("%b", 77);
-	printf("binario: %d", res);
+	res = _printf("%b\n", 77);
+	printf("lenght binario %d\n", res);
+
+	//octal
 	printf("=====================\n");
 	printf("*****OCTAL*****\n");
 	printf("=====================\n");
 	int a = printf("\n%o\n", (INT_MAX * (-1)));
 	int b = _printf("\n%o\n", (INT_MAX * (-1)));
-	printf("%d\n", a);
-	printf("%d\n", b);
-	a = printf("\n%o\n", INT_MAX);
-	b = _printf("\n%o\n", INT_MAX);
-	printf("%d\n", a);
-	printf("%d\n", b);
+	printf("Expected   : %d\n", a);
+	printf("Actual     : %d\n", b);
+	a = printf("\nExpected   : %o\n", 0);
+	b = _printf("\nActual     : %o\n", 0);
+	printf("Expected   : %d\n", a);
+	printf("Actual     : %d\n", b);
+	a = printf("\nExpected   : %o\n", INT_MAX);
+	b = _printf("\nActual     : %o\n", INT_MAX);
+	printf("Expected   : %d\n", a);
+	printf("Actual     : %d\n", b);
+	for (int g = 0; g < 21; g++)
+	{
+		printf("\nExpected   : %o\n", g);
+		_printf("\nActual     : %o\n", g);
+	}
+/*
+	//char
+	char c = 'z';
 	printf("=====================\n");
 	printf("*****CHAR*****\n");
 	printf("=====================\n");
@@ -226,5 +255,6 @@ int main(void)
 	//combos
 	printf("Expected   : %u, %i, %c, %d, %s\n", INT_MIN, 324, 'g', 32, "hello");
 	_printf("Expected   : %u, %i, %c, %d, %s\n", INT_MIN, 324, 'g', 32, "hello");
+*/
 	return(0);
 }
