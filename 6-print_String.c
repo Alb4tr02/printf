@@ -46,8 +46,11 @@ void hex_print(char s)
 	int i = 0;
 	unsigned int r = 0;
 	unsigned char p = 255;
+
 	p = (p & s);
+
 	unsigned char bit = 1;
+
 	for (i = 0; i < 8; i++)
 	{
 		r = ((bit << (7 - i)) & p);
