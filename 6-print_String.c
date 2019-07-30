@@ -8,7 +8,7 @@ int print_String(va_list va)
 {
 	char *s;
 	char nu[] = "(null)";
-	int i, lenght, cont = 0;
+	int i, cont = 0;
 
 	s = va_arg(va, char *);
 	if (s == NULL)
@@ -46,10 +46,9 @@ void hex_print(char s)
 	int i = 0;
 	unsigned int r = 0;
 	unsigned char p = 255;
+	unsigned char bit = 1;
 
 	p = (p & s);
-
-	unsigned char bit = 1;
 
 	for (i = 0; i < 8; i++)
 	{
