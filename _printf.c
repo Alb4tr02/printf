@@ -22,7 +22,7 @@ void make_struct(prfor_t a[])
 	a[6].form = "R";
 	a[6].f = print_string_rot;
 	a[7].form = "u";
-	a[7].f = print_unsigned;
+	a[7].f = print_unsig;
 	a[8].form = "o";
 	a[8].f = print_octal;
 	a[9].form = "x";

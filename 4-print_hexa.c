@@ -1,4 +1,9 @@
 #include "holberton.h"
+/**
+ * compareh - take arguments bigger than 10 and change it to char.
+ * @res: number given.
+ * Return: corresponding character.
+ */
 char compareh(int res)
 {
 	char h = 'a';
@@ -29,6 +34,11 @@ char compareh(int res)
 	}
 	return (h);
 }
+/**
+ * print_hexa - print in hexadecimal.
+ * @va: arguments.
+ * Return: lenght of string.
+ */
 int print_hexa(va_list va)
 {
 	int prueba;

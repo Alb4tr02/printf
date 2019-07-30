@@ -1,4 +1,9 @@
 #include "holberton.h"
+/**
+ * compareH - switch the given numbert to hexa uppercase.
+ * @res: given number.
+ * Return: character uppercase.
+ */
 char compareH(int res)
 {
 	char h = 'a';
@@ -29,6 +34,11 @@ char compareH(int res)
 	}
 	return (h);
 }
+/**
+ * print_Hexa - switch the given numbert to hexa uppercase.
+ * @va: arguments.
+ * Return: lenght of string.
+ */
 int print_Hexa(va_list va)
 {
 	int prueba;

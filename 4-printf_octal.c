@@ -1,9 +1,14 @@
 #include "holberton.h"
-
+/**
+ * print_octal - function that prints formated to octal.
+ * @va: arguments.
+ * Return: lenght of string.
+ */
 int print_octal(va_list va)
 {
 	int a = 0;
 	int prueba;
+
 	prueba = va_arg(va, int);
 	if (prueba >= 0)
 		a = print_octal_pos(prueba);
@@ -11,11 +16,17 @@ int print_octal(va_list va)
 		a = print_octal_neg(prueba);
 	return (a);
 }
+/**
+ * print_octal_pos - function that prints formated to octal positive.
+ * @prueba: number given.
+ * Return: lenght of string.
+ */
 int print_octal_pos(int prueba)
 {
 	char binary[32];
 	int i = 0, flag = 0, p = 0, j = 0, res = 0, cont = 0;
 	char h = '0';
+
 	array_binary(prueba, binary);
 	if (prueba == 0)
 	{
@@ -52,11 +63,18 @@ int print_octal_pos(int prueba)
 	}
 	return (cont);
 }
+
+/**
+ * print_octal_neg - function that prints formated to octal negative.
+ * @prueba: number given.
+ * Return: lenght of string.
+ */
 int print_octal_neg(int prueba)
 {
 	char binary[32];
 	int i = 0, flag = 0, p = 0, j = 0, res = 0, cont = 0;
 	char h = '0';
+
 	array_binary(prueba, binary);
 	for (p = 31; p > 2 ; p -= 3)
 	{

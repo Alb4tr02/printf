@@ -19,7 +19,7 @@ int print_string_rev(va_list va)
 		return (6);
 	}
 	lenght = _strlen(s);
-	for (i = (lenght -1); i >= 0; i--)
+	for (i = (lenght - 1); i >= 0; i--)
 		_putchar(s[i]);
 	return (lenght);
 }
