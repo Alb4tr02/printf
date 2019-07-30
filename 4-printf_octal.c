@@ -25,6 +25,7 @@ int print_octal_pos(int prueba)
 {
 	char binary[32];
 	int i = 0, flag = 0, p = 0, j = 0, res = 0, cont = 0;
+
 	array_binary(prueba, binary);
 	if (prueba == 0)
 	{
@@ -44,6 +45,7 @@ int print_octal_pos(int prueba)
 		res += 4 * (binary[i + 0] - '0');
 		res += 2 * (binary[i + 1] - '0');
 		res += 1 * (binary[i + 2] - '0');
+
 		if (res)
 			flag = 1;
 		if (flag)
@@ -64,6 +66,7 @@ int print_octal_neg(int prueba)
 {
 	char binary[32];
 	int i = 0, flag = 0, p = 0, j = 0, res = 0, cont = 0;
+
 	array_binary(prueba, binary);
 	for (p = 31; p > 2 ; p -= 3)
 	{
