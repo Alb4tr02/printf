@@ -22,6 +22,8 @@ int main(void)
 	printf("=====================\n");
 	printf("*****PRINT S*****\n");
 	printf("=====================\n");
+	res = _printf("hola %S HOLA\n", NULL);
+	printf("%d\n", res);
 	_printf("\n%S\n", "looool\nlol");
 	printf("=====================\n");
 	_printf("\n%S\n", "looool\tlol");
