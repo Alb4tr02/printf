@@ -26,6 +26,8 @@ int print_octal_pos(int prueba);
 int print_octal_neg(int prueba);
 char copmareh(int res);
 char copmareH(int res);
+void hex_print(char s);
+void print_arr(char bin[]);
 /*functios*/
 int _printf(const char * const format, ...);
 
@@ -40,4 +42,5 @@ int print_unsigned(va_list va);
 int print_hexa(va_list prueba);
 int print_Hexa(va_list prueba);
 int print_octal(va_list prueba);
+int print_String(va_list va);
 #endif
