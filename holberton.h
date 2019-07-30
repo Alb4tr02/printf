@@ -36,6 +36,7 @@ int print_number(va_list va);
 int print_binary(va_list va);
 int print_string_rev(va_list va);
 int print_string_rot(va_list va);
+int print_unsigned(va_list va);
 int print_hexa(va_list prueba);
 int print_Hexa(va_list prueba);
 int print_octal(va_list prueba);

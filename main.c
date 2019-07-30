@@ -8,6 +8,9 @@
  */
 int main(void)
 {
+	int alen, elen;
+	int len, len2;
+
 	// NULL
 	printf(NULL);
 	_printf(NULL);
@@ -16,8 +19,6 @@ int main(void)
 	//char
 	int res = 0;
 	char c = 'z';
-	int alen, elen;
-	int len, len2;
 	printf("=====================\n");
 	printf("*****HEXA*****\n");
 	printf("=====================\n");
@@ -33,8 +34,12 @@ int main(void)
 	printf("=====================\n");
 	printf("*****OCTAL*****\n");
 	printf("=====================\n");
-	int a = printf("\n%o\n", 123456732);
-	int b = _printf("\n%o\n", 123456732);
+	int a = printf("\n%o\n", (INT_MAX * (-1)));
+	int b = _printf("\n%o\n", (INT_MAX * (-1)));
+	printf("%d\n", a);
+	printf("%d\n", b);
+	a = printf("\n%o\n", INT_MAX);
+	b = _printf("\n%o\n", INT_MAX);
 	printf("%d\n", a);
 	printf("%d\n", b);
 	printf("=====================\n");
@@ -188,8 +193,38 @@ int main(void)
 	printf("Expected   : %Rschool\n", "holberton");
 	_printf("Actual     : %Rschool\n", "holberton");
 
+	//u
+	printf("=====================\n");
+	printf("*****UNSIGNED*****\n");
+	printf("=====================\n");
+	unsigned int uelen = 0;
+	unsigned int ualen = 0;
+	unsigned int m = 113342421;
+	z = 0;
+	elen = printf("Expected   : %u\n", m);
+	alen = _printf("Actual     : %u\n", m);
+	printf("Expected   : %u\n", elen);
+	_printf("Actual     : %u\n", alen);
+	uelen = printf("Expected   : %u\n", z);
+	ualen = _printf("Actual     : %u\n", z);
+	printf("Expected   : %u\n", uelen);
+	_printf("Actual     : %u\n", ualen);
+	printf("Expected   : %u\n", z);
+	_printf("Actual     : %u\n", z);
+	printf("Expected   : %u\n", -5);
+	_printf("Actual     : %u\n", -5);
+	printf("Expected   : %u\n", UINT_MAX);
+	_printf("Actual     : %u\n", UINT_MAX);
+	printf("Expected   : %u\n", INT_MAX);
+	_printf("Actual     : %u\n", INT_MAX);
+	printf("Expected   : %u\n", 1);
+	_printf("Actual     : %u\n", 1);
+	printf("Expected   : %u\n", INT_MIN);
+	_printf("Actual     : %u\n", INT_MIN);
+	printf("=====================\n");
+
 	//combos
-	printf("Expected   : %i, %c, %d, %s\n", 324, 'g', 32, "hello");
-	_printf("Expected   : %i, %c, %d, %s\n", 324, 'g', 32, "hello");
+	printf("Expected   : %u, %i, %c, %d, %s\n", INT_MIN, 324, 'g', 32, "hello");
+	_printf("Expected   : %u, %i, %c, %d, %s\n", INT_MIN, 324, 'g', 32, "hello");
 	return(0);
 }
