@@ -10,7 +10,8 @@ int main(void)
 {
 	int alen, elen;
 	int len, len2;
-
+	int a = 32;
+	int *po = &a;
 	// NULL
 	printf(NULL);
 	_printf(NULL);
@@ -19,6 +20,12 @@ int main(void)
 	//char
 	int res = 0;
 	char c = 'z';
+	printf("=====================\n");
+	printf("*****PRINT POINTER*****\n");
+	printf("=====================\n");
+	a = printf("%p\n", po);
+	printf("%d", a);
+	_printf("%p\n", po);
 	printf("=====================\n");
 	printf("*****PRINT S*****\n");
 	printf("=====================\n");
@@ -38,7 +45,7 @@ int main(void)
 	printf("=====================\n");
 	printf("*****OCTAL*****\n");
 	printf("=====================\n");
-	int a = printf("\n%o\n", (INT_MAX * (-1)));
+	a = printf("\n%o\n", (INT_MAX * (-1)));
 	int b = _printf("\n%o\n", (INT_MAX * (-1)));
 	printf("%d\n", a);
 	printf("%d\n", b);

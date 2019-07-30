@@ -43,4 +43,5 @@ int print_hexa(va_list prueba);
 int print_Hexa(va_list prueba);
 int print_octal(va_list prueba);
 int print_String(va_list va);
+int print_pointer(va_list va);
 #endif
