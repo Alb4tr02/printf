@@ -7,16 +7,11 @@
 int print_String(va_list va)
 {
 	char *s;
-	char nu[] = "(null)";
 	int i, cont = 0;
 
 	s = va_arg(va, char *);
 	if (s == NULL)
-	{
-		for (i = 0; nu[i] != '\0'; i++)
-			_putchar(nu[i]);
-		return (6);
-	}
+		s = "(null)";
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		if ((s[i] > 0 && s[i] < 32) || (s[i] >= 127))
@@ -46,14 +41,11 @@ void hex_print(char s)
 	char bl[8];
 	int i = 0;
 	unsigned int r = 0;
-	unsigned char p = 255;
 	unsigned char bit = 1;
-
-	p = (p & s);
 
 	for (i = 0; i < 8; i++)
 	{
-		r = ((bit << (7 - i)) & p);
+		r = ((bit << (7 - i)) & s);
 		r = r >> (7 - i);
 		bl[i] = r + '0';
 	}
@@ -73,6 +65,7 @@ void print_arr(char bin[])
 
 	for (; i <= 4; i += 4)
 	{
+		res = 0;
 		res += 8 * (bin[i + 0] - '0');
 		res += 4 * (bin[i + 1] - '0');
 		res += 2 * (bin[i + 2] - '0');
