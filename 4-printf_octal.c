@@ -24,25 +24,14 @@ int print_octal(va_list va)
 int print_octal_pos(int prueba)
 {
 	char binary[32];
-	int i = 0, flag = 0, p = 0, j = 0, res = 0, cont = 0;
+	int i = 0, flag = 0, res = 0, cont = 0;
+
 	array_binary(prueba, binary);
 	if (prueba == 0)
 	{
 		_putchar('0');
 		return (1);
 	}
-	for (p = 31; p > 2 ; p -= 3)
-	{
-		flag = 0;
-		for (j = 0; j < 3; j++)
-		{
-			if (binary[p - j] == '1')
-				flag = 1;
-		}
-		if (flag == 0)
-			break;
-	}
-
 	res += 2 * (binary[0] - '0');
 	res += 1 * (binary[1] - '0');
 	if (res)
@@ -50,20 +39,20 @@ int print_octal_pos(int prueba)
 		_putchar(res + '0');
 		cont++;
 	}
-	int flag1 = 1;
-	for (i = p - 3; i <= 31; i += 3)
+	for (i = 2; i <= 29; i += 3)
 	{
-		res  = 0;
-		res += 1 * (binary[i - 0] - '0');
-		res += 2 * (binary[i - 1] - '0');
-		res += 4 * (binary[i - 2] - '0');
-		if (flag1 && !res)
+		res = 0;
+		res += 4 * (binary[i + 0] - '0');
+		res += 2 * (binary[i + 1] - '0');
+		res += 1 * (binary[i + 2] - '0');
+
+		if (res)
+			flag = 1;
+		if (flag)
 		{
-			flag1 = 0;
-			continue;
+			_putchar(res + '0');
+			cont++;
 		}
-		_putchar(res + '0');
-		cont++;
 	}
 	return (cont);
 }
@@ -77,6 +66,7 @@ int print_octal_neg(int prueba)
 {
 	char binary[32];
 	int i = 0, flag = 0, p = 0, j = 0, res = 0, cont = 0;
+
 	array_binary(prueba, binary);
 	for (p = 31; p > 2 ; p -= 3)
 	{

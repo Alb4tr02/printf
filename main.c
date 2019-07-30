@@ -20,6 +20,10 @@ int main(void)
 
 	//hexadecimal
 	printf("=====================\n");
+	printf("*****PRINT S*****\n");
+	printf("=====================\n");
+	_printf("\n%S\n", "looool\tlol");
+	printf("=====================\n");
 	printf("*****HEXA*****\n");
 	printf("=====================\n");
 	int e = printf("\n%x, %X\n", (INT_MAX * (-1)), (INT_MAX * (-1)));
@@ -53,24 +57,22 @@ int main(void)
 	printf("=====================\n");
 	int a = printf("\n%o\n", (INT_MAX * (-1)));
 	int b = _printf("\n%o\n", (INT_MAX * (-1)));
-	printf("Expected   : %d\n", a);
-	printf("Actual     : %d\n", b);
-	a = printf("\nExpected   : %o\n", 0);
-	b = _printf("\nActual     : %o\n", 0);
-	printf("Expected   : %d\n", a);
-	printf("Actual     : %d\n", b);
-	a = printf("\nExpected   : %o\n", INT_MAX);
-	b = _printf("\nActual     : %o\n", INT_MAX);
-	printf("Expected   : %d\n", a);
-	printf("Actual     : %d\n", b);
-	for (int g = 0; g < 21; g++)
-	{
-		printf("\nExpected   : %o\n", g);
-		_printf("\nActual     : %o\n", g);
-	}
-/*
-	//char
-	char c = 'z';
+	printf("%d\n", a);
+	printf("%d\n", b);
+	printf("positivos\n");
+	a = printf("\n%o\n", INT_MAX);
+	b = _printf("\n%o\n", INT_MAX);
+	printf("%d\n", a);
+	printf("%d\n", b);
+	a = printf("\n%o\n", 8);
+	b = _printf("\n%o\n", 8);
+	printf("%d\n", a);
+	printf("%d\n", b);
+	a = printf("\n%o\n", 123456);
+	b = _printf("\n%o\n", 123456);
+	printf("%d\n", a);
+	printf("%d\n", b);
+
 	printf("=====================\n");
 	printf("*****CHAR*****\n");
 	printf("=====================\n");
