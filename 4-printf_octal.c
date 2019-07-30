@@ -24,7 +24,7 @@ int print_octal(va_list va)
 int print_octal_pos(int prueba)
 {
 	char binary[32];
-	int i = 0, flag = 0, p = 0, j = 0, res = 0, cont = 0;
+	int i = 0, flag = 0, res = 0, cont = 0;
 
 	array_binary(prueba, binary);
 	if (prueba == 0)
