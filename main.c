@@ -18,12 +18,16 @@ int main(void)
 
 	int res = 0;
 
-	//hexadecimal
+	//print SSSS
 	printf("=====================\n");
 	printf("*****PRINT S*****\n");
 	printf("=====================\n");
+	_printf("\n%S\n", "looool\nlol");
+	printf("=====================\n");
 	_printf("\n%S\n", "looool\tlol");
 	printf("=====================\n");
+
+	//hexadecimal
 	printf("*****HEXA*****\n");
 	printf("=====================\n");
 	int e = printf("\n%x, %X\n", (INT_MAX * (-1)), (INT_MAX * (-1)));
@@ -73,6 +77,7 @@ int main(void)
 	printf("%d\n", a);
 	printf("%d\n", b);
 
+	char c = 'z';
 	printf("=====================\n");
 	printf("*****CHAR*****\n");
 	printf("=====================\n");
@@ -257,6 +262,6 @@ int main(void)
 	//combos
 	printf("Expected   : %u, %i, %c, %d, %s\n", INT_MIN, 324, 'g', 32, "hello");
 	_printf("Expected   : %u, %i, %c, %d, %s\n", INT_MIN, 324, 'g', 32, "hello");
-*/
+
 	return(0);
 }

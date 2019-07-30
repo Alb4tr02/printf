@@ -15,21 +15,24 @@ int print_String(va_list va)
 	{
 		for (i = 0; nu[i] != '\0'; i++)
 			_putchar(nu[i]);
-		return (6);
+		return (0);
 	}
-	for (i = 0; s[i] != '\0'; i++)
+	else
 	{
-		if ((s[i] > 0 && s[i] < 32) || (s[i] >= 127))
+		for (i = 0; s[i] != '\0'; i++)
 		{
-			cont += 4;
-			_putchar(92);
-			_putchar('x');
-			hex_print(s[i]);
-		}
-		else
-		{
-			_putchar(s[i]);
-			cont++;
+			if ((s[i] > 0 && s[i] < 32) || (s[i] >= 127))
+			{
+				cont += 4;
+				_putchar(92);
+				_putchar('x');
+				hex_print(s[i]);
+			}
+			else
+			{
+				_putchar(s[i]);
+				cont++;
+			}
 		}
 	}
 	return (cont);
