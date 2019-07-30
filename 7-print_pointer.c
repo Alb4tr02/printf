@@ -1,4 +1,9 @@
 #include "holberton.h"
+/**
+ * comparehh - take arguments bigger than 10 and change it to char.
+ * @res: number given.
+ * Return: corresponding character.
+ */
 char comparehh(int res)
 {
 	char h = 'a';
@@ -29,6 +34,10 @@ char comparehh(int res)
 	}
 	return (h);
 }
+/**
+ * imprimir - print nil when pointer NULL.
+ *
+ */
 void imprimir(void)
 {
 	_putchar('(');
@@ -37,6 +46,11 @@ void imprimir(void)
 	_putchar('l');
 	_putchar(')');
 }
+/**
+ * print_pointer - pointer address
+ * @va: arguments.
+ * Return: lenght of string.
+ */
 int print_pointer(va_list va)
 {
 	char bin[64];
@@ -69,7 +83,7 @@ int print_pointer(va_list va)
 	}
 	_putchar('0');
 	_putchar('x');
-	for (i = p; i <= 60; i += 4)
+	for (i = p; i <= 60; i += 4, cont++)
 	{
 		resp  = 0;
 		resp += 8 * (bin[i + 0] - '0');
@@ -77,7 +91,6 @@ int print_pointer(va_list va)
 		resp += 2 * (bin[i + 2] - '0');
 		resp += 1 * (bin[i + 3] - '0');
 		_putchar(comparehh(resp));
-		cont++;
 	}
 	return (cont + 2);
 }

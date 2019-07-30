@@ -9,9 +9,11 @@
 int main(void)
 {
 	int alen, elen;
-	int len, len2;
-	int a = 32;
-	int *po = &a;
+	int len, len2, a;
+	char stri[] = "hola";
+	void *po = &stri;
+	void *addr;
+	addr = (void *)0x7ffe637541f0;
 	// NULL
 	printf(NULL);
 	_printf(NULL);
@@ -19,13 +21,19 @@ int main(void)
 
 	int res = 0;
 
-	//print SSSS
+	//print POINTER
 	printf("=====================\n");
 	printf("*****PRINT POINTER*****\n");
 	printf("=====================\n");
-	a = printf("%p\n", po);
-	printf("%d", a);
-	_printf("%p\n", po);
+	_printf("Address:[%p]\n", addr);
+	printf("Address:[%p]\n", addr);
+	len2 = printf("Expected   address 'po': %p\n", po);
+	printf("Exp --> %d\n", len2);
+	len = _printf("Actual     address 'po': %p\n", po);
+	_printf("Act --> %d\n", len);
+
+
+	//print SSSS
 	printf("=====================\n");
 	printf("*****PRINT S*****\n");
 	printf("=====================\n");
@@ -50,7 +58,7 @@ int main(void)
 	f = _printf("\nActual     : %x, %X\n", INT_MAX, INT_MAX);
 	printf("Expected   : %d\n", e);
 	printf("Actual     : %d\n", f);
-	for (int g = 0; g < 21; g++)
+	for (int g = 0; g < 5; g++)
 	{
 		printf("\nExpected   : %x, %X\n", g, g);
 		_printf("\nActual     : %x, %X\n", g, g);
