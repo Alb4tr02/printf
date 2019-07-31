@@ -69,8 +69,6 @@ int print_pointer(va_list va)
 		resp = resp >> (63 - i);
 		bin[i] = (resp + '0');
 	}
-	_putchar('0');
-	_putchar('x');
 	for (p = 0; p <= 60 ; p += 4)
 	{
 		flag = 0;
