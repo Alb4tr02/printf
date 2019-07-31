@@ -23,9 +23,10 @@ int main(void)
 	printf("=====================\n");
 	printf("*****PRINT POINTER*****\n");
 	printf("=====================\n");
-	a = printf("%p\n", po);
+	a = printf("%p\n", (void *)-1);
+	printf("%d\n", a);
+	a = _printf("%p\n", (void *) -1);
 	printf("%d", a);
-	_printf("%p\n", po);
 	printf("=====================\n");
 	printf("*****PRINT S*****\n");
 	printf("=====================\n");
