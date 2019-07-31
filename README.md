@@ -27,55 +27,54 @@ Man page file:
 
 ### FILES DESCRIPTION
 - _printf.c 
-//Main function, detect which printing function use
+<br>Main function, detect which printing function use
 
 - 0-printf_c_s.c
-//Print strings or characters.
+<br>Print strings or characters.
 
 - _putchar.c 
-//Print character by character.
+<br>Print character by character.
 
 - holberton.h
-//Header file contain the function prototypes and structrure declaration.
+<br>Header file contain the function prototypes and structrure declaration.
 
 - 1-printf_i_d.c
-//Print integrer
+<br>Print integrer
 
 - 15-printf_rot13.c 
-//Encode to rot13 and print strings
-https://github.com/david-develop/printf
+<br>Encode to rot13 and print strings
 - 3-printf_b.c
-//Print to binary.
+<br>Print to binary.
 
 - 14-printf_rev.c
-//Print reverse string.
+<br>Print reverse string.
 
 - 4-arrat_binary.c
-//Print a binary array
+<br>Print a binary array
 
 - 4-print_Hexa.c
-//Print in hexadecimal uppercase
+<br>Print in hexadecimal uppercase
 
 - 4-print_hexa.c
-//Print in hexadecimal.
+<br>Print in hexadecimal.
 
 - 4-printf_octal.c
-//Print unsigned int base eight
+<br>Print unsigned int base eight
 
 - 4-printf_u.c
-//Print unsigned integrer numbers
+<br>Print unsigned integrer numbers
 
 - 6-print_String.c
-//Print strings and non-printing characters
+<br>Print strings and non-printing characters
 
 - 7-print_pointer.c
-//Print pointer address
+<br>Print pointer address
 
 - _strlen.c	add
-//gets the lenght of a string
+<br>gets the lenght of a string
 
 - man_3_printf
-//MAN PAGE
+<br>MAN PAGE
 
 ### Tech
 
