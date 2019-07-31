@@ -13,17 +13,17 @@ Man page file:
 
 ## Conversion Specifiers
 - c - characters.
-- s - strings
-- i - integrer
-- d - base 10 numbers
-- b - binary
-- u - unsigned
-- o - octal
-- x - hexadecimal
-- X - hexadecimal uppercase
-- p - pointer
-- r - reverse string
-- R - rot13'ed encode
+- s - strings.
+- i - integrer.
+- d - base 10 numbers.
+- b - binary.
+- u - unsigned.
+- o - octal.
+- x - hexadecimal.
+- X - hexadecimal uppercase.
+- p - pointer.
+- r - reverse string.
+- R - rot13'ed encode.
 
 ### FILES DESCRIPTION
 - _printf.c 
@@ -43,7 +43,7 @@ Man page file:
 
 - 15-printf_rot13.c 
 //Encode to rot13 and print strings
-
+https://github.com/david-develop/printf
 - 3-printf_b.c
 //Print to binary.
 
@@ -90,9 +90,8 @@ Man page file:
 
 ### AUTHORS
 
-- David Peralta
-- Johan David Muñoz
-Want to contribute? Great!
+- David Peralta <a>https://github.com/david-develop</a>
+- Johan David Muñoz <a>https://github.com/Alb4tr02</a>
 
 ### Example
 ```c
