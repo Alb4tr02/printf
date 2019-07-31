@@ -55,10 +55,9 @@ int print_pointer(va_list va)
 {
 	char bin[64];
 	unsigned long int punt;
-	long int t = 1, resp = 0;
+	unsigned long int t = 1, resp = 0;
 	int i = 0, j = 0, p = 0, cont = 0, flag = 0;
-
-	punt = va_arg(va, unsigned long int);
+ 	punt =va_arg(va, unsigned long int);
 	if (!punt)
 	{
 		imprimir();
@@ -70,6 +69,8 @@ int print_pointer(va_list va)
 		resp = resp >> (63 - i);
 		bin[i] = (resp + '0');
 	}
+	_putchar('0');
+	_putchar('x');
 	for (p = 0; p <= 60 ; p += 4)
 	{
 		flag = 0;
@@ -83,7 +84,7 @@ int print_pointer(va_list va)
 	}
 	_putchar('0');
 	_putchar('x');
-	for (i = p; i <= 60; i += 4, cont++)
+	for (i = p; i <= 60; i += 4)
 	{
 		resp  = 0;
 		resp += 8 * (bin[i + 0] - '0');
@@ -91,6 +92,7 @@ int print_pointer(va_list va)
 		resp += 2 * (bin[i + 2] - '0');
 		resp += 1 * (bin[i + 3] - '0');
 		_putchar(comparehh(resp));
+		cont++;
 	}
 	return (cont + 2);
 }

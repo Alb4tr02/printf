@@ -25,15 +25,18 @@ int main(void)
 	printf("=====================\n");
 	printf("*****PRINT POINTER*****\n");
 	printf("=====================\n");
+
 	_printf("Address:[%p]\n", addr);
 	printf("Address:[%p]\n", addr);
 	len2 = printf("Expected   address 'po': %p\n", po);
 	printf("Exp --> %d\n", len2);
 	len = _printf("Actual     address 'po': %p\n", po);
 	_printf("Act --> %d\n", len);
-
-
 	//print SSSS
+	a = printf("%p\n", (void *)-1);
+	printf("%d\n", a);
+	a = _printf("%p\n", (void *) -1);
+	printf("%d", a);
 	printf("=====================\n");
 	printf("*****PRINT S*****\n");
 	printf("=====================\n");
