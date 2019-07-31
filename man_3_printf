@@ -8,14 +8,131 @@
 .B int _printf(const char * const
 .I format
 .B , ...);
+
 .SH DESCRIPTION
-Holberton School is a project-based alternative to college for the next generation of software engineers.
-.SH OPTIONS
-.B holberton
-does not take any options. However, you can supply studentname.
-.SH SEE ALSO
-.I peerlearning(2), projectbased(2), fullstack(2), Betty(1)
+This function is a custom function inspired in the standard
+.B printf()
+function, it produces output according to a
+.I format.
+The output goes to the standard output stream.
+
+The conversion is  under control of the
+.I format string
+, this string specifies which kind of format will take the arguments depending
+on the specifiers. The arguments are accessed via
+.I va_list.
+
+The
+.I format
+string is composed of zero or more directives, which are not ‘%’ characters, if
+they exist, are copied to the stdout as they are, without format options. The ‘%
+’ is the character that introduces the conversion specifiers, they are explained
+below, each one gets a corresponding argument and gives them the specified format.
+
+That is why the arguments must be ordered after the
+.I format string
+, according to the corresponding conversation specifier, each conversion specifier
+will call arguments in the order they are organized.
+
+.SH CONVERSION SPECIFIERS
+
+.B d, i
+.RS
+This conversion works for
+.I int arguments
+or integrer arguments, the 'd' stands for numbers base 10.
+.RE
+
+.B o, u, x, X
+.RS
+Are used for
+.I unsigned int
+arguments. 'o' converts to octal, 'u' is for unsigned decimal, 'x'converts to
+hexadecimal in lowercase and 'X' in uppercase.
+.RE
+
+.B c
+.RS
+Takes the int argument, which is an ASCII code and print the correspinding
+character, it is converted to
+.I unsigned char
+.RE
+
+.B s
+.RS
+The argument expected is a pointer to an array of character or string, type
+.I const char *.
+The characters of the array are printed one by one until a termination null byte
+'\\0' is reached. If the corresponding pointer to string is NULL, then it will
+print '(null)'.
+.RE
+
+.B b
+.RS
+Are used for
+.I unsigned int
+arguments. Converts to binary.
+.RE
+
+.B S
+.RS
+Like the conversion specifier 's', it will print array of character or strings
+but in this case the non printable characters will be printed in a different way:
+those characters will print '\\x' followed by a 2 character hexadecimal ASCII code.
+.RE
+
+.B p
+.RS
+It get a
+.I void *
+argument. that is printed in hexadecimal, usually the output is 8 characters long.
+.RE
+
+.B r
+.RS
+The argument expected is a pointer to an array of character or string, type
+.I const char *
+like the 's' specifier, but in this case the characters of the array are printed
+in reverse way one by one.
+.RE
+
+.B r
+.RS
+The argument expected is a pointer to an array of character or string, type
+.I const char *
+like the 's' specifier, but in this case it encode the string to rot13 and prints it.
+.RE
+
+.B p
+.RS
+It get a
+.I void *
+argument. that is printed in hexadecimal, usually the output is 8 characters long.
+.RE
+
+.SH RETURN VALUE
+When successful, the function return the number of characters printed excluding the null byte '\\0',
+when errors a negative value, most cases (-1), is returned.
+.SH EXAMPLE
+.RS
+#include "holberton.h"
+
+int main (void)
+.br
+{
+.br
+	char *str = "Hello, Holberton";
+.br
+	_printf("rot13'ed string: %R\\n", str);
+.br
+	return (0);
+.br
+}
+.br
+EXPECTED OUTPUT:
+.B "rot13'ed string: Uryyb, Ubyoregba"
+
 .SH BUGS
-No known bugs.
-.SH AUTHOR
-Julien Barbier, Sylvain Kalache, Sophie Barbier, Guillaume Salva, Kris Bredemeier, Julien Cyr, Alex Gautier and all the Holberton mentors
+No known bugs, pending revision.
+.SH AUTHORS
+David Peralta and Johan David Muñoz.
