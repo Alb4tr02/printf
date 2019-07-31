@@ -27,7 +27,6 @@ int print_binary(va_list va)
 		}
 	}
 	if (!cont)
-		
 	{
 		cont++;
 		_putchar('0');
